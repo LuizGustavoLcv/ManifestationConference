@@ -11,6 +11,10 @@
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:smooth;}
+html{
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
 body{
   background:var(--black);
   color:var(--white);
@@ -56,6 +60,7 @@ h1,h2,h3{
 .btn-fill:hover{ background:var(--orange-glow); border-color:var(--orange-glow); transform:translateY(-2px); }
 .btn-outline{ background:transparent; color:var(--white); }
 .btn-outline:hover{ background:var(--orange); color:var(--black); transform:translateY(-2px); }
+.btn-nav{ padding:12px 22px; font-size:12px; }
 
 /* ===== TOPBAR ===== */
 .topbar{
@@ -446,6 +451,9 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   .ticket-cards{grid-template-columns:1fr;}
 }
 @media (max-width: 640px){
+  .nav .wrap{ height:64px; }
+  nav.menu{ top:64px; }
+  .btn-nav{ padding:8px 13px; font-size:10px; }
   .hero{ min-height:100vh; }
   .hero::after{ width:110vw; height:38vh; }
   .topbar .wrap{ justify-content:flex-end; flex-wrap:nowrap; gap:0 24px; }
