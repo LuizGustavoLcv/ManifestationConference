@@ -405,7 +405,7 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   text-align:left;
   margin-bottom:14px;
 }
-.footer-logo span{color:var(--orange);}
+.footer-logo {color:var(--orange);}
 .footer-cols{display:flex; gap:70px; flex-wrap:wrap;}
 .footer-col h4{
   font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--orange);
