@@ -356,8 +356,8 @@ section{padding:120px 0; position:relative;}
   background:var(--surface-2);
   border:1px solid var(--line);
   padding:44px 32px;
-  text-align:left;
-  position:relative;
+  text-align:center;
+  position: relative;
 }
 .ticket-card.featured{ border-color:var(--orange); }
 .ticket-card .tc-tag{
