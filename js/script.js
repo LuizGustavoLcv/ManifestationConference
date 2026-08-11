@@ -12,7 +12,7 @@ const ticketModal = document.getElementById('ticketModal');
 const symplaGrid = document.getElementById('symplaGrid');
 
 function openTicketModal(){
-  if(!symplaGrid.src) symplaGrid.src = SYMPLA_GRID_URL;
+  if(!symplaGrid.getAttribute('src')) symplaGrid.setAttribute('src', SYMPLA_GRID_URL);
   ticketModal.classList.add('open');
   ticketModal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('no-scroll');
