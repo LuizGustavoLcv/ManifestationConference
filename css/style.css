@@ -403,6 +403,7 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
 .footer-brand p{color:var(--off-white); font-size:13.5px; max-width:280px; line-height:1.7;}
 .footer-logo{
   font-family:'Anton', sans-serif;
+  color: var(--orange);
   font-size:24px;
   letter-spacing:0.03em;
   text-transform:uppercase;
