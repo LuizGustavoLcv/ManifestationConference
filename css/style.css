@@ -343,19 +343,20 @@ section{padding:120px 0; position:relative;}
 
 /* ===== INGRESSOS ===== */
 .tickets{background:var(--surface); text-align:center;}
-.tickets .section-head{margin:0 auto 50px; text-align:center;}
+.tickets .section-head{margin:0 auto 30px; text-align:center;}
 .tickets .section-head p{margin-left:auto; margin-right:auto;}
 .ticket-cards{
   display:grid;
-  grid-template-columns:repeat(2, minmax(260px,1fr));
-  gap:28px;
+  grid-template-columns:1fr;
+  justify-items:center;
+  text-align:center;
   max-width:760px;
   margin:0 auto;
 }
 .ticket-card{
   background:var(--surface-2);
   border:1px solid var(--line);
-  padding:44px 32px;
+  padding:50px 44px;
   text-align:center;
   position: relative;
 }
@@ -366,53 +367,9 @@ section{padding:120px 0; position:relative;}
 }
 .ticket-card .tc-day{font-family:'Anton',sans-serif; font-size:30px; margin-bottom:10px;}
 .ticket-card .tc-price{font-size:34px; font-weight:800; margin-bottom:6px;}
-.ticket-card .tc-price span{font-size:14px; color:var(--off-white); font-weight:500;}
+.ticket-card .tc-price span{font-size:14px; color:var(--orange); font-weight:500;}
 .ticket-card .tc-note{font-size:13px; color:var(--off-white); opacity:.8; margin-bottom:28px;}
 .ticket-card .btn{width:100%;}
-
-/* ===== MODAL INGRESSOS ===== */
-.no-scroll{overflow:hidden;}
-.modal{
-  position:fixed; inset:0; z-index:200;
-  display:flex; align-items:center; justify-content:center;
-  padding:20px;
-  visibility:hidden; opacity:0;
-  transition:opacity .25s ease, visibility .25s ease;
-}
-.modal.open{visibility:visible; opacity:1;}
-.modal-overlay{
-  position:absolute; inset:0;
-  background:rgba(0,0,0,0.78);
-  backdrop-filter:blur(6px);
-  -webkit-backdrop-filter:blur(6px);
-}
-.modal-box{
-  position:relative; z-index:1;
-  width:min(640px, 100%);
-  max-height:90vh;
-  background:var(--surface);
-  border:1px solid var(--line);
-  box-shadow:0 24px 60px rgba(0,0,0,.6);
-  display:flex; flex-direction:column;
-  overflow:hidden;
-}
-.modal-close{
-  position:absolute; top:10px; right:12px; z-index:2;
-  width:38px; height:38px;
-  background:none; border:none; cursor:pointer;
-  font-size:26px; line-height:1; color:var(--off-white);
-  transition:color .2s;
-}
-.modal-close:hover{color:var(--orange);}
-.modal-head{padding:28px 28px 18px; border-bottom:1px solid var(--line);}
-.modal-head h3{font-size:26px; margin-top:10px;}
-.modal-head p{margin-top:10px; font-size:13.5px; color:var(--off-white); opacity:.85;}
-.modal-body{flex:1; min-height:400px; position:relative;}
-.modal-body iframe{
-  position:absolute; inset:0; width:100%; height:100%;
-  border:0;
-  background:#fff;
-}
 
 /* ===== LOCAL ===== */
 .local{background:var(--black);}
@@ -494,7 +451,6 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   .menu-toggle{display:flex;}
   .tema-grid, .schedule-days, .local-grid{grid-template-columns:1fr;}
   .ticket-cards{grid-template-columns:1fr;}
-  .modal-body{min-height:60vh;}
 }
 @media (max-width: 640px){
   .nav .wrap{ height:64px; }

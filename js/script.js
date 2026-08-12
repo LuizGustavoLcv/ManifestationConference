@@ -4,30 +4,6 @@ const menu = document.getElementById('menu');
 menuToggle.addEventListener('click', () => menu.classList.toggle('open'));
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
 
-// ===== Ticket modal (Sympla Grid de Ingressos) =====
-// Troque o eid abaixo pelo ID do seu evento. Para pegar: painel do evento na Sympla > aba "Divulgue" > Grid de Ingressos (o link do widget tem o eid na URL).
-const SYMPLA_GRID_URL = 'https://www.sympla.com.br/tickets-grid-widget?eid=3533806&lang=pt';
-
-const ticketModal = document.getElementById('ticketModal');
-const symplaGrid = document.getElementById('symplaGrid');
-
-function openTicketModal(){
-  if(!symplaGrid.getAttribute('src')) symplaGrid.setAttribute('src', SYMPLA_GRID_URL);
-  ticketModal.classList.add('open');
-  ticketModal.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('no-scroll');
-}
-function closeTicketModal(){
-  ticketModal.classList.remove('open');
-  ticketModal.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('no-scroll');
-}
-document.querySelectorAll('[data-ticket-open]').forEach(btn => btn.addEventListener('click', openTicketModal));
-ticketModal.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', closeTicketModal));
-document.addEventListener('keydown', e => {
-  if(e.key === 'Escape' && ticketModal.classList.contains('open')) closeTicketModal();
-});
-
 // ===== Countdown timer -> set to event date =====
 const eventDate = new Date('2026-12-04T18:00:00-03:00').getTime();
 function updateCountdown(){

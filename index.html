@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manifestation Conference</title>
+<title>MANIFESTATION</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="shortcut icon" href="./Img/icon.png" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -233,19 +235,12 @@
         <p>Sua contribuição ajuda a viabilizar este encontro e a levar essa mensagem adiante. Vagas limitadas.</p>
       </div>
       <div class="ticket-cards">
-        <!--<div class="ticket-card">
-          <span class="tc-tag">Passe Diário</span>
-          <div class="tc-day">Sexta</div>
-          <div class="tc-price">R$ 39,90<span>/pessoa</span></div>
-          <div class="tc-note">Acesso à noite de abertura</div>
-          <button type="button" class="btn btn-outline" data-ticket-open>INGRESSO DIA 1</button>
-        </div>-->
         <div class="ticket-card">
           <span class="tc-tag">Passe Completo</span>
           <div class="tc-day">Sex + Sáb</div>
           <div class="tc-price">R$ 69,90<span>/pessoa</span></div>
           <div class="tc-note">Acesso aos dois dias de conferência</div>
-          <button type="button" class="btn btn-fill" data-ticket-open>INGRESSO COMPLETO</button>
+          <a href="https://www.sympla.com.br/evento/manifestation-conference-6-edicao/3533806" target="_blank" rel="noopener" class="btn btn-fill">INGRESSO COMPLETO</a> 
         </div>
       </div>
     </div>
@@ -284,7 +279,8 @@
   <section class="cta-final">
     <h2>Venha esperar<br>a manifestação</h2>
     <p>Traga sua família, seus amigos e um coração aberto. Esse é um convite para experimentar, não apenas ouvir.</p>
-    <a href="#ingressos" class="btn btn-fill">QUERO GARANTIR MEU LUGAR</a>
+    <a href="#ingressos" class="btn btn-fill">QUERO GARANTIR
+       MEU LUGAR</a>
   </section>
 
   <!-- FOOTER -->
@@ -332,22 +328,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- MODAL INGRESSOS (Sympla Grid de Ingressos) -->
-  <div class="modal" id="ticketModal" aria-hidden="true">
-    <div class="modal-overlay" data-modal-close></div>
-    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="ticketModalTitle">
-      <button class="modal-close" data-modal-close aria-label="Fechar">×</button>
-      <div class="modal-head">
-        <span class="eyebrow">Garanta sua vaga</span>
-        <h3 id="ticketModalTitle">Ingressos Manifestation</h3>
-        <p>Escolha o ingresso e finalize a compra pelo Sympla, com pagamento seguro via Pix ou cartão.</p>
-      </div>
-      <div class="modal-body">
-        <iframe id="symplaGrid" src="" title="Ingressos no Sympla" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </div>
 
   <script src="js/script.js"></script>
 </body>
