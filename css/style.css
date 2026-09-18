@@ -111,17 +111,20 @@ header.nav{
   align-items:center;
   justify-content:space-between;
   height:78px;
+  position:relative;
 }
 .logo{
-  font-family:'Anton', sans-serif;
-  font-size:22px;
-  letter-spacing:0.03em;
+  letter-spacing:0.10em;
   text-transform:uppercase;
-  line-height:0.95;
-  text-align:center;
+  line-height:1;
+  width:clamp(160px, 22vw, 300px);
+  display:flex;
+  align-items:center;
+  margin-left:-40px;
 }
+.logo img{display:block; height:auto; max-width:100%;}
 .logo span{color:var(--orange);}
-nav.menu{display:flex; gap:34px; align-items:center;}
+nav.menu{display:flex; gap:34px; align-items:center; position:absolute; left:50%; transform:translateX(-50%);}
 nav.menu a{
   font-size:13px;
   font-weight:600;
@@ -342,10 +345,11 @@ section{padding:120px 0; position:relative;}
 .tickets .section-head p{margin-left:auto; margin-right:auto;}
 .ticket-cards{
   display:grid;
-  grid-template-columns:repeat(2, minmax(260px,1fr));
+  grid-template-columns:minmax(260px, 420px);
   gap:28px;
   max-width:760px;
   margin:0 auto;
+  justify-content:center;
 }
 .ticket-card{
   background:var(--surface-2);
@@ -363,6 +367,21 @@ section{padding:120px 0; position:relative;}
 .ticket-card .tc-price{font-size:34px; font-weight:800; margin-bottom:6px;}
 .ticket-card .tc-price span{font-size:14px; color:var(--off-white); font-weight:500;}
 .ticket-card .tc-note{font-size:13px; color:var(--off-white); opacity:.8; margin-bottom:28px;}
+.ticket-card .tc-deal{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px;}
+.ticket-card .tc-sale{
+  font-size:11px; letter-spacing:0.10em; text-transform:uppercase;
+  color:var(--surface-2); background:var(--orange); font-weight:700;
+  padding:4px 10px; border-radius:3px;
+}
+.ticket-card .tc-old{font-size:15px; color:var(--off-white); opacity:.6; text-decoration:line-through;}
+.tc-fee-note{
+  max-width:760px;
+  margin:18px auto 0;
+  font-size:12px;
+  color:var(--off-white);
+  opacity:.7;
+  text-align:center;
+}
 .ticket-card .btn{width:100%;}
 
 /* ===== LOCAL ===== */
@@ -394,8 +413,9 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap;
   padding-bottom:40px; border-bottom:1px solid var(--line); margin-bottom:26px;
 }
-.footer-brand .footer-logo{margin-bottom:14px;}
-.footer-brand p{color:var(--off-white); font-size:13.5px; max-width:280px; line-height:1.7;}
+.footer-brand .footer-logo{margin:0;}
+.footer-logo img{display:block; line-height:0; width:100%; max-width:clamp(140px, 22vw, 220px);}
+.footer-brand p{color:var(--off-white); font-size:13.5px; max-width:280px; line-height:1.7; margin:0;}
 .footer-logo{
   font-family:'Anton', sans-serif;
   font-size:24px;
@@ -430,6 +450,7 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
 @media (max-width: 860px){
   nav.menu{
     position:fixed; top:78px; left:0; right:0;
+    transform:none;
     background:var(--black);
     flex-direction:column;
     align-items:flex-start;
@@ -446,6 +467,7 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   .ticket-cards{grid-template-columns:1fr;}
 }
 @media (max-width: 640px){
+  .logo{margin-left:0; width:160px;}
   .hero{ min-height:100vh; }
   .hero::after{ width:110vw; height:38vh; }
   .topbar .wrap{ justify-content:flex-end; flex-wrap:nowrap; gap:0 24px; }
