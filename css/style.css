@@ -621,7 +621,18 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
 .footer-social a .icon{color:inherit;}
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 860px){
+/* Tablet */
+@media (max-width:1024px){
+  section{padding:100px 0;}
+  .hero{min-height:70vh;}
+  .hero::before{height:55vh;}
+  .hero-glass{padding:48px 32px;}
+  .tema-grid, .local-grid{gap:40px;}
+  nav.menu{gap:24px;}
+}
+
+/* Mobile menu / tablet portrait */
+@media (max-width:880px){
   nav.menu{
     position:fixed; top:78px; left:0; right:0;
     transform:none;
@@ -639,13 +650,46 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   .menu-toggle{display:flex;}
   .tema-grid, .schedule-days, .local-grid{grid-template-columns:1fr;}
   .ticket-cards{grid-template-columns:1fr;}
+  .footer-top{gap:34px;}
+  .footer-col{width:100%;}
 }
-@media (max-width: 640px){
-  .logo{margin-left:0; width:160px;}
-  .hero{ min-height:100vh; }
-  .hero::after{ width:110vw; height:38vh; }
+
+/* Phones */
+@media (max-width:600px){
+  .wrap{padding:0 20px;}
+  section{padding:72px 0;}
+  .section-head{margin-bottom:38px;}
+  .hero{min-height:auto; padding:72px 20px 56px;}
+  .hero::before{height:46vh;}
+  .hero::after{width:110vw; height:32vh;}
+  .hero-glass{padding:38px 18px;}
+  .hero h1{font-size:clamp(36px, 11.5vw, 60px);}
+  .hero-tag{font-size:12px; letter-spacing:0.24em;}
+  .hero-meta{gap:12px 22px; font-size:12px; margin-bottom:32px; letter-spacing:0.04em;}
+  .hero-cta{flex-direction:column; width:100%;}
+  .hero-cta .btn{width:100%;}
+  .countdown-band{padding:26px 0;}
+  .countdown{gap:22px;}
+  .countdown .num{font-size:clamp(30px, 9vw, 40px);}
+  .eyebrow{font-size:11px; letter-spacing:0.22em;}
+  .btn{padding:14px 24px; font-size:12px;}
+  .ticket-card{padding:34px 22px;}
+  .ticket-card .tc-price{font-size:30px;}
+  .day-card{padding:24px 18px;}
+  .day-time{letter-spacing:0.14em; font-size:10px;}
+  .footer-top{flex-direction:column;}
+  .footer-logo{font-size:clamp(32px, 9vw, 44px);}
+  footer{padding:48px 0 26px;}
+  .footer-bottom{flex-direction:column; align-items:flex-start;}
+}
+
+/* Small phones */
+@media (max-width:420px){
   .topbar .wrap{ justify-content:flex-end; flex-wrap:nowrap; gap:0 24px; }
   .topbar-left, .topbar-social{ width:auto; flex-wrap:nowrap; justify-content:flex-start; gap:24px; }
   .topbar-link span{ display:none; }
   .topbar-link .icon{ width:22px; height:22px; }
+  .logo{margin-left:0; width:auto;}
+  .logo .logo-name{font-size:clamp(19px, 6vw, 24px);}
+  .hero-meta{flex-direction:column; align-items:center; gap:8px;}
 }
