@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manifestation </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="shortcut icon" href="./Img/logo.PNG" type="image/Png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ICON SPRITES (usados via <use>) -->
+  <svg style="display:none">
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 20l1.3-3.9A8 8 0 1 1 9 19.7L4 20z"/>
+      <path d="M9 10.3c0 3.1 2.6 5.7 5.7 5.7"/>
+    </symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="M4 7l8 6 8-6"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4.2"/>
+      <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+      <path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/>
+    </symbol>
+  </svg>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-left">
+        <a class="topbar-link" href="https://wa.me/5527992541503" target="_blank" rel="noopener">
+          <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+          <span>+55 27 99254-1503</span>
+        </a>
+        <a class="topbar-link" href="mailto:nomesobretodonomechurch@gmail.com">
+          <svg class="icon"><use href="#icon-email"></use></svg>
+          <span>nomesobretodonomechurch@gmail.com</span>
+        </a>
+      </div>
+      <div class="topbar-social">
+        <a class="topbar-link" href="https://www.instagram.com/manifestationinglory" target="_blank" rel="noopener">
+          <svg class="icon"><use href="#icon-instagram"></use></svg>
+          <span>Instagram</span>
+        </a>
+        <a class="topbar-link" href="https://youtube.com/@manifestationinglory" target="_blank" rel="noopener">
+          <svg class="icon"><use href="#icon-youtube"></use></svg>
+          <span>YouTube</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap">
+      <div class="logo"><a href="index.html" style="display:flex; align-items:center;"><div class="logo-name">Manifestation</div></a></div>
+      <nav class="menu" id="menu">
+        <a href="#tema">O TEMA</a>
+        <a href="#programacao">PROGRAMAÇÃO</a>
+        <a href="#ingressos">INGRESSOS</a>
+        <a href="#local">LOCAL</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:18px;">
+        <a href="#ingressos" class="btn btn-fill" style="padding:12px 22px; font-size:12px;">GARANTIR VAGA</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="embers" id="embers"></div>
+    <div class="hero-content">
+      <div class="hero-glass">
+        <div class="hero-tag">A última chama</div>
+        <h1><span class="accent">MANIFESTATION</span><br></h1>
+        <div class="hero-hours">12 HORAS</div>
+        <div class="hero-meta">
+          <div><span>DATA</span> · 05 Dezembro 2026</div>
+          <div><span>LOCAL</span> · R. José Vivácqua, 75 - Jabour, Vitória</div>
+        </div>
+        <div class="hero-cta">
+          <a href="#ingressos" class="btn btn-fill">GARANTIR MEU INGRESSO</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-band">
+    <div class="wrap countdown" id="countdown">
+      <div class="unit"><div class="num" id="cd-days">00</div><div class="label">Dias</div></div>
+      <div class="unit"><div class="num" id="cd-hours">00</div><div class="label">Horas</div></div>
+      <div class="unit"><div class="num" id="cd-mins">00</div><div class="label">Minutos</div></div>
+      <div class="unit"><div class="num" id="cd-secs">00</div><div class="label">Segundos</div></div>
+    </div>
+  </div>
+
+  <!-- TEMA -->
+<section class="tema" id="tema">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"></span>
+        <h2>A Última Chama</h2>
+        <p>
+          Vivemos tempos em que muitos falam sobre a presença de Deus, mas poucos a vivem.
+          A Manifestation  nasce de uma convicção simples: o Evangelho não é apenas
+          uma mensagem para ser ouvida, é uma realidade para ser manifestada — em nós, através
+          de nós, na igreja e no mundo.
+        </p>
+      </div>
+      <div class="tema-grid">
+        <div class="tema-questions">
+          <div class="tq reveal" style="--d:.05s">A presença de Deus é experiência ou apenas doutrina?</div>
+          <div class="tq reveal" style="--d:.15s">Como viver de forma que o caráter de Cristo seja visível todos os dias?</div>
+          <div class="tq reveal" style="--d:.25s">O que significa manifestar o Reino em família, trabalho e cidade?</div>
+        </div>
+        <div class="tema-text reveal" style="--d:.3s">
+          <p>
+            Ao longo da história, cada avivamento genuíno começou quando o povo de Deus parou
+            de apenas falar sobre Sua glória e passou a buscá-la com todo o coração.
+            <strong> Isaías clamou, Elias construiu o altar, os discípulos esperaram no cenáculo</strong> —
+            e o fogo caiu.
+          </p>
+          <p>
+            Por isso, a Manifestation é um chamado para além do conforto:
+            um convite para buscar, esperar e permitir que a presença de Deus transborde
+            de dentro para fora — na adoração, na palavra e na vida cotidiana de cada participante.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMACAO -->
+  <section class="schedule" id="programacao">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"></span>
+        <h2>Cronograma</h2>
+      </div>
+      <div class="schedule-days">
+        <div class="day-card reveal">
+          <div class="day-title">SÁBADO · 05 DEZ</div>
+          <div class="day-item reveal" style="--d:.1s">
+            <div class="day-time">10:00 DA MANHÃ ATÉ ÁS 22:00 DA NOITE</div>
+            <div class="day-desc"><div class="day-desc-title">SALA DE ORAÇÃO, ADORAÇÃO & PALAVRA</div><div class="day-desc-sub"></div></div>
+          </div>
+          <!--<div class="day-item">
+            <div class="day-time">10:30</div>
+            <div class="day-desc"><div class="day-desc-title">Workshops Temáticos</div><div class="day-desc-sub">Família, propósito e liderança</div></div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">14:00</div>
+            <div class="day-desc"><div class="day-desc-title">Palavra & Ensino</div><div class="day-desc-sub">A glória que se manifesta</div></div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">16:00</div>
+            <div class="day-desc"><div class="day-desc-title">Painel com Ministros</div><div class="day-desc-sub">Perguntas e respostas</div></div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">19:00</div>
+            <div class="day-desc"><div class="day-desc-title">Culto de Encerramento</div><div class="day-desc-sub">Louvor, ministração e envio</div></div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+  </section>
+
+  <!-- INGRESSOS -->
+  <section class="tickets" id="ingressos">
+    <div class="wrap">
+<div class="section-head">
+        <span class="eyebrow"></span>
+        <h2>GARANTA SEU INGRESSO</h2>
+      </div>
+      <div class="ticket-cards">
+        <div class="ticket-card featured">
+          <span class="tc-tag">Passe Único · Sábado, 05 DEZ</span>
+          <div class="tc-day">Sábado</div>
+          <div class="tc-price">R$ 43,99<span>/pessoa</span></div>
+          <div class="tc-deal">
+            <span class="tc-sale">Lote promocional</span>
+            <span class="tc-old">R$ 79,90</span>
+          </div>
+          <div class="tc-note">Acesso ao dia completo de conferência</div>
+          <a href="https://www.sympla.com.br/evento/manifestation-conference---6-edicao/3533806" target="_blank" rel="noopener" class="btn btn-fill">INGRESSO COMPLETO</a>
+        </div>
+      </div>
+      <p class="tc-fee-note">*Valores acrescidos de taxa de serviço no pagamento.</p>
+    </div>
+  </section>
+
+  <!-- LOCAL -->
+  <section class="local" id="local">
+    <div class="wrap">
+      <div class="local-grid">
+        <div class="local-info">
+          <span class="eyebrow" style="display:block; margin-bottom:20px;">Onde acontece</span>
+          <h2 style="font-size:clamp(30px,4vw,44px); margin-bottom:26px;">Local do Evento</h2>
+          <div class="item">
+            <div class="lab">Endereço</div>
+            <div class="val">Paz Church Vitória — R. José Vivácqua, 75, Jabour, Vitória, ES</div>
+          </div>
+          <div class="item">
+            <div class="lab">Data</div>
+            <div class="val">5 de Dezembro de 2026</div>
+          </div>
+          <div class="item">
+            <div class="lab">Horário</div>
+            <div class="val">A partir das 10h</div>
+          </div>
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=-20.260308,-40.2937844&hl=pt-BR&z=17&output=embed"
+            style="border:0; position:absolute; inset:0; width:100%; height:100%;"
+            loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Paz Church Vitória"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Perguntas &amp; Respostas</h2>
+        <p>Dúvidas frequentes sobre o evento. Não encontrou a sua? Chama a gente no WhatsApp!</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Que horas devo chegar?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Abrimos as portas às 9h00 e o evento começa às 10h00. Chegue cedo, mas durante todo o evento é possível entrar, não importa o horário.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Qual será o Lineup?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Nós não divulgamos o Lineup. É a nossa cultura como Manifestation, crendo em um ajuntamento de amigos que se encontram puramente para adorar a Jesus, como um só Corpo.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Existe uma programação do dia?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Não divulgamos programação. Faz parte de nossa cultura Manifestation, de viver intensamente as 12 horas na presença do Senhor, focados apenas Nele!</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Tem pausa para almoço e jantar?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Não fazemos intervalos. São 12 horas seguidas de adoração, das 10h00 às 22h00, e nossa praça de alimentação fica disponível durante todo o evento.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Todas as idades podem ir ao evento?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Sim! Para menores de 12 anos é obrigatório a presença de um responsável para a entrada.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>O que preciso para entrar no evento?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Para entrada, apresente seu documento e ingresso emitido após a compra na plataforma. Pode ser apresentado impresso ou pelo celular.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Posso levar alimentos?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Sim, porém não é permitido a entrada e/ou consumo de alimentos dentro do espaço interno do evento. Incentivamos que leve sua garrafinha de água, mas caso prefira, sempre disponibilizamos uma praça de alimentação para o evento.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Posso sair e entrar do evento?</span>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Pode! Desde que você permaneça com a pulseira entregue na entrada do evento.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">Manifestation</a>
+        </div>
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <a href="mailto:nomesobretodonomechurch@gmail.com">
+              <svg class="icon"><use href="#icon-email"></use></svg>
+              nomesobretodonomechurch@gmail.com
+            </a>
+            <a href="https://wa.me/5527992541503" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+              +55 27 99254-1503
+            </a>
+            <a href="#local">Ver localização</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Manifestation. Todos os direitos reservados.</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/manifestationinglory" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#icon-instagram"></use></svg> Instagram
+          </a>
+          <a href="https://youtube.com/@manifestationinglory" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#icon-youtube"></use></svg> YouTube
+          </a>
+          <a href="https://wa.me/5527992541503" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#icon-whatsapp"></use></svg> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
