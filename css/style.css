@@ -657,6 +657,8 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
 /* Phones */
 @media (max-width:600px){
   .wrap{padding:0 20px;}
+  .nav .wrap{gap:12px;}
+  .nav .btn{display:none;}
   section{padding:72px 0;}
   .section-head{margin-bottom:38px;}
   .hero{min-height:auto; padding:72px 20px 56px;}
