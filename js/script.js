@@ -4,8 +4,24 @@ const menu = document.getElementById('menu');
 menuToggle.addEventListener('click', () => menu.classList.toggle('open'));
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
 
+// ===== FAQ accordion =====
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o => {
+      o.classList.remove('open');
+      o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen){
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
 // ===== Countdown timer -> set to event date =====
-const eventDate = new Date('2026-12-04T18:00:00-03:00').getTime();
+const eventDate = new Date('2026-12-05T09:00:00-03:00').getTime();
 function updateCountdown(){
   const now = new Date().getTime();
   const diff = eventDate - now;
