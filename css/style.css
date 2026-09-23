@@ -456,6 +456,49 @@ section{padding:120px 0; position:relative;}
 }
 .day-desc .day-desc-sub{ font-size:12.5px; color:var(--off-white); opacity:.75; margin-top:6px; }
 
+/* ===== QUEM JÁ PASSOU ===== */
+.past{background:var(--black); padding-bottom:0; overflow:hidden;}
+.past .section-head{text-align:center; margin-left:auto; margin-right:auto;}
+.past .section-head p{margin-left:auto; margin-right:auto;}
+.marquee{
+  overflow:hidden;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:34px 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(250,113,0,0.12), transparent 70%),
+    var(--surface);
+  -webkit-mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track{
+  display:flex;
+  align-items:center;
+  width:max-content;
+  animation:marqueeScroll 55s linear infinite;
+  will-change:transform;
+}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+.m-name{
+  flex-shrink:0;
+  font-family:'Moves Cabse', sans-serif;
+  font-size:clamp(26px, 3.6vw, 46px);
+  letter-spacing:0.04em;
+  color:var(--off-white);
+  margin-right:34px;
+  transition:color .3s ease;
+}
+.m-name::after{content:"•"; color:var(--orange); margin-left:34px;}
+.m-name:hover{color:var(--orange);}
+@keyframes marqueeScroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{animation:none; flex-wrap:wrap; justify-content:center; width:100%;}
+  .marquee .m-name{margin:6px 17px;}
+}
+
 /* ===== INGRESSOS ===== */
 .tickets{background:var(--surface); text-align:center;}
 .tickets .section-head{margin:0 auto 50px; text-align:center;}
