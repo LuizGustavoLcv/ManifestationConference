@@ -124,10 +124,9 @@ header.nav{
   letter-spacing:0.10em;
   text-transform:uppercase;
   line-height:1;
-  width:clamp(160px, 22vw, 300px);
   display:flex;
   align-items:center;
-  margin-left:-40px;
+  flex:0 0 auto;
 }
 .logo .logo-name{
   font-family:'Moves Cabse', sans-serif;
@@ -136,25 +135,13 @@ header.nav{
   line-height:1;
   color:var(--orange);
   transition:color .3s ease;
+  white-space:nowrap;
 }
 .logo .logo-name:hover{color:var(--white);}
 .logo .logo-name span{color:var(--orange);}
 .logo img{display:block; height:auto; max-width:100%;}
 .logo span{color:var(--orange);}
-nav.menu{display:flex; gap:34px; align-items:center; position:absolute; left:50%; transform:translateX(-50%);}
-nav.menu a{
-  font-size:13px;
-  font-weight:600;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  opacity:.85;
-  position:relative;
-  padding-bottom:4px;
-  transition:opacity .2s, color .2s;
-}
-nav.menu a:hover{opacity:1; color:var(--orange);}
-.menu-toggle{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
-.menu-toggle span{width:26px; height:2px; background:var(--white);}
+.logo-short{display:none;}
 
 /* ===== HERO / FOGO ===== */
 .hero{
@@ -628,26 +615,10 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   .hero::before{height:55vh;}
   .hero-glass{padding:48px 32px;}
   .tema-grid, .local-grid{gap:40px;}
-  nav.menu{gap:24px;}
 }
 
 /* Mobile menu / tablet portrait */
 @media (max-width:880px){
-  nav.menu{
-    position:fixed; top:78px; left:0; right:0;
-    transform:none;
-    background:var(--black);
-    flex-direction:column;
-    align-items:flex-start;
-    gap:0;
-    border-bottom:1px solid var(--line);
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .3s ease;
-  }
-  nav.menu.open{max-height:400px;}
-  nav.menu a{width:100%; padding:16px 24px; border-bottom:1px solid var(--line);}
-  .menu-toggle{display:flex;}
   .tema-grid, .schedule-days, .local-grid{grid-template-columns:1fr;}
   .ticket-cards{grid-template-columns:1fr;}
   .footer-top{gap:34px;}
@@ -659,7 +630,14 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   .wrap{padding:0 20px;}
   .nav .wrap{gap:12px;}
   .nav .btn{display:none;}
-  .logo .logo-name{font-size:clamp(22px, 7.5vw, 30px);}
+  .logo{flex:1; justify-content:center; margin-left:0; text-align:center;}
+  .logo-short{display:inline;}
+  .logo-full{display:none;}
+  .logo .logo-name{font-size:clamp(32px, 11vw, 44px);}
+  .topbar .wrap{justify-content:center; gap:0 28px; flex-wrap:nowrap;}
+  .topbar-left, .topbar-social{gap:28px; flex-wrap:nowrap;}
+  .topbar-link span{display:none;}
+  .topbar-link .icon{width:20px; height:20px;}
   section{padding:72px 0;}
   .section-head{margin-bottom:38px;}
   .hero{min-height:auto; padding:72px 20px 56px;}
@@ -689,11 +667,6 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
 
 /* Small phones */
 @media (max-width:420px){
-  .topbar .wrap{ justify-content:flex-end; flex-wrap:nowrap; gap:0 24px; }
-  .topbar-left, .topbar-social{ width:auto; flex-wrap:nowrap; justify-content:flex-start; gap:24px; }
-  .topbar-link span{ display:none; }
-  .topbar-link .icon{ width:22px; height:22px; }
   .logo{margin-left:0; width:auto;}
-  .logo .logo-name{font-size:clamp(22px, 7.5vw, 30px);}
   .hero-meta{flex-direction:column; align-items:center; gap:8px;}
 }
