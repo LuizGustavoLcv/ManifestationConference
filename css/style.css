@@ -2,6 +2,7 @@
   --black:#000000;
   --surface:#141414;
   --surface-2:#1e1e1e;
+  --gray:#4d4d4d;
   --orange:#FA7100;
   --orange-glow:#FFB067;
   --white:#FFFFFF;
@@ -457,47 +458,29 @@ section{padding:120px 0; position:relative;}
 .day-desc .day-desc-sub{ font-size:12.5px; color:var(--off-white); opacity:.75; margin-top:6px; }
 
 /* ===== QUEM JÁ PASSOU ===== */
-.past{background:var(--black); padding-bottom:0; overflow:hidden;}
-.past .section-head{text-align:center; margin-left:auto; margin-right:auto;}
+.past{background:var(--black); overflow:hidden;}
+.past .section-head{text-align:center; margin-left:auto; margin-right:auto; margin-bottom:72px;}
 .past .section-head p{margin-left:auto; margin-right:auto;}
-.marquee{
-  overflow:hidden;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:34px 0;
-  background:
-    radial-gradient(ellipse at 50% 50%, rgba(250,113,0,0.12), transparent 70%),
-    var(--surface);
-  -webkit-mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-}
-.marquee-track{
+.past-list{
+  padding:40px clamp(20px, 6vw, 80px);
   display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
   align-items:center;
-  width:max-content;
-  animation:marqueeScroll 55s linear infinite;
-  will-change:transform;
+  gap:14px 0;
 }
-.marquee:hover .marquee-track{animation-play-state:paused;}
 .m-name{
-  flex-shrink:0;
   font-family:'Moves Cabse', sans-serif;
-  font-size:clamp(26px, 3.6vw, 46px);
-  letter-spacing:0.04em;
+  font-size:clamp(26px, 3.2vw, 44px);
+  letter-spacing:0.03em;
+  line-height:1;
   color:var(--off-white);
-  margin-right:34px;
+  padding-right:14px;
   transition:color .3s ease;
 }
-.m-name::after{content:"•"; color:var(--orange); margin-left:34px;}
+.m-name::after{content:"•"; color:var(--orange); margin-left:12px;}
+.m-name:last-child::after{content:none;}
 .m-name:hover{color:var(--orange);}
-@keyframes marqueeScroll{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
-}
-@media (prefers-reduced-motion: reduce){
-  .marquee-track{animation:none; flex-wrap:wrap; justify-content:center; width:100%;}
-  .marquee .m-name{margin:6px 17px;}
-}
 
 /* ===== INGRESSOS ===== */
 .tickets{background:var(--surface); text-align:center;}
@@ -642,7 +625,7 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
 .footer-col a:hover, .footer-col a:hover .icon{color:var(--orange);}
 .footer-col a .icon{ color:var(--off-white); transition:color .2s; }
 .footer-bottom{
-  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
   font-size:12px; color:var(--off-white); opacity:.7;
 }
 .footer-social{display:flex; gap:16px;}
@@ -705,7 +688,10 @@ footer{background:var(--black); border-top:1px solid var(--line); padding:60px 0
   .footer-top{flex-direction:column;}
   .footer-logo{font-size:clamp(32px, 9vw, 44px);}
   footer{padding:48px 0 26px;}
-  .footer-bottom{flex-direction:column; align-items:flex-start;}
+  .footer-bottom{flex-direction:column; align-items:center; justify-content:center; text-align:center;}
+  .past-list{padding:28px clamp(20px, 6vw, 80px); gap:16px 0;}
+  .m-name{font-size:clamp(20px, 5vw, 28px); padding-right:10px;}
+  .m-name::after{margin-left:8px;}
 }
 
 /* Small phones */
